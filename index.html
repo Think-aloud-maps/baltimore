@@ -212,13 +212,13 @@
             { title: "Current Time", info: "6:24 PM." },
             { title: "Address of Origin", info: "46 S Kossuth St, Baltimore, MD 21229." },
             { title: "Address of Destination", info: "Baltimore Plant, 2301 S Newkirk St, Baltimore, MD 21224." },
-            { title: "Distance to Destination", info: "0" },
-            { title: "Estimated Time to Destination", info: "0" },
+            { title: "Distance to Destination", info: "9.19 miles." },
+            { title: "Estimated Time to Destination", info: "24 minutes." },
             { title: "State of Charge of Battery", info: "60% charge." },
             { title: "Range of Current Battery", info: "180 minutes." },
             { title: "Estimated Drive Distance with Current Charge", info: "136 miles." },
             { title: "Type of Charging Socket", info: "J1772." },
-            { title: "kW Needed to Fully Charge Your Car", info: "24 kW." }
+            { title: "kW Needed to Fully Charge Your Car", info: "31 kW." }
         ];
 
 
@@ -231,10 +231,10 @@
                 name: 'West Baltimore Marc Station',
 
                 location: '401 N Smallwood St, Baltimore, MD 21223, USA',
-                originDistance: ' Miles',
-                originTime: ' Minutes',
-                destDistance: ' Miles ',
-                destTime: ' Minutes',
+                originDistance: '2.1',
+                originTime: '8',
+                destDistance: '7.91',
+                destTime: '17',
 
                 waitTime: [
                         { type: 'J1772', value: '0' }
@@ -271,10 +271,10 @@
                 name: 'Horseshoe Casino Baltimore',
 
                 location: '1525 Russell Street. Baltimore, MD',
-                originDistance: ' Miles',
-                originTime: ' Minutes',
-                destDistance: ' Miles ',
-                destTime: ' Minutes',
+                originDistance: '4.05',
+                originTime: '15',
+                destDistance: '5.96',
+                destTime: '13',
                 
                 waitTime: [
                         { type: 'J1772', value: '0' }
@@ -936,8 +936,8 @@
         // Add route time/distance to instructions & update charging station details
         map.on('load', async () => {
             await getRoute(0); // Ensure this is awaited properly
-            await updateAndDisplayRouteInstructions();  // Ensure this is awaited properly
-            await updateChargingStationDetails();  // Ensure this is awaited properly
+            // await updateAndDisplayRouteInstructions();  // Ensure this is awaited properly
+            // await updateChargingStationDetails();  // Ensure this is awaited properly
             addChargingStations();  // You might need to re-add stations to reflect updated data
         });
 
